@@ -8,7 +8,7 @@ const fetcher = (url: string) => axios.get(url).then((res) => res.data);
 export const Content = () => {
   const { imdbId } = useParams();
   const { data } = useSWR(
-    `http://7.tcp.eu.ngrok.io:18089/api/content/${imdbId}`,
+    `https://771a-37-130-123-69.ngrok-free.app/api/content/${imdbId}`,
     fetcher
   );
 

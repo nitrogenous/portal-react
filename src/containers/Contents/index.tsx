@@ -6,7 +6,7 @@ const fetcher = (url: string) => axios.get(url).then((res) => res.data);
 
 export const Contents = () => {
   const { data } = useSWR(
-    "http://7.tcp.eu.ngrok.io:18089/api/contents",
+    "https://771a-37-130-123-69.ngrok-free.app/api/contents",
     fetcher
   );
 
