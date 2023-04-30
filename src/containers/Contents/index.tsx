@@ -13,7 +13,7 @@ export const Contents = () => {
   return (
     <>
       <Showcase showcaseTitle="Movies" showcaseItems={data?.movies} />
-      <Showcase showcaseTitle="Movies" showcaseItems={data?.series} />
+      <Showcase showcaseTitle="Series" showcaseItems={data?.series} />
     </>
   );
 };
