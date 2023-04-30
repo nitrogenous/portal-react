@@ -2,7 +2,14 @@ import axios from "axios";
 import useSWR from "swr";
 import { Showcase } from "../../components/Showcase";
 
-const fetcher = (url: string) => axios.get(url).then((res) => res.data);
+const fetcher = (url: string) =>
+  axios
+    .get(url, {
+      headers: {
+        "ngrok-skip-browser-warning": "any",
+      },
+    })
+    .then((res) => res.data);
 
 export const Contents = () => {
   const { data } = useSWR(

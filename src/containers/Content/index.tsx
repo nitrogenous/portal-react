@@ -3,7 +3,14 @@ import useSWR from "swr";
 import { useParams } from "react-router-dom";
 import ReactPlayer from "react-player";
 
-const fetcher = (url: string) => axios.get(url).then((res) => res.data);
+const fetcher = (url: string) =>
+  axios
+    .get(url, {
+      headers: {
+        "ngrok-skip-browser-warning": "any",
+      },
+    })
+    .then((res) => res.data);
 
 export const Content = () => {
   const { imdbId } = useParams();
